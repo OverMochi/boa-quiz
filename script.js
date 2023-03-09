@@ -56,8 +56,6 @@ function getCharacter() {
     body: JSON.stringify({
       answerOne: answerOne,
       answerTwo: answerTwo,
-      answerThree: answerThree,
-      answerFour: answerFour,
     }),
   })
     .then(handleError)
