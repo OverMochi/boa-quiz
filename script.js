@@ -1,7 +1,5 @@
 const questionOneItems = document.querySelectorAll("#questionOne > ul >li");
 const questionTwoItems = document.querySelectorAll("#questionTwo > ul >li");
-const questionThreeItems = document.querySelectorAll("#questionThree > ul >li");
-const questionFourItems = document.querySelectorAll("#questionFour > ul >li");
 const questionTwo = document.querySelector("#questionTwo");
 const motionState = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -10,14 +8,6 @@ window.addEventListener("load", (event) => {
     item.addEventListener("click", toQuestionTwo);
   });
 
-  questionTwoItems.forEach((item) => {
-    item.addEventListener("click", toQuestionThree);
-  });
-
-  questionThreeItems.forEach((item) => {
-    item.addEventListener("click", toQuestionFour);
-  });
-});
 
 $("#quiz-form").submit(function () {
   getCharacter();
@@ -36,13 +26,6 @@ function toQuestionTwo() {
   respectMotionPreference(document.querySelector("#questionTwo"));
 }
 
-function toQuestionThree() {
-  respectMotionPreference(document.querySelector("#questionThree"));
-}
-
-function toQuestionFour() {
-  respectMotionPreference(document.querySelector("#questionFour"));
-}
 
 function getCharacter() {
   respectMotionPreference(document.querySelector("#results"));
@@ -62,12 +45,6 @@ function getCharacter() {
   );
   const answerTwo = Number(
     document.querySelector('input[name="two"]:checked').value
-  );
-  const answerThree = Number(
-    document.querySelector('input[name="three"]:checked').value
-  );
-  const answerFour = Number(
-    document.querySelector('input[name="four"]:checked').value
   );
 
   fetch("https://bparker.autocode.dev/buzzfeed-how-to@dev/", {
