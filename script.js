@@ -47,7 +47,7 @@ function getCharacter() {
     document.querySelector('input[name="two"]:checked').value
   );
 
-  fetch("https://bparker.autocode.dev/buzzfeed-how-to@dev/", {
+  fetch("https://jimlin1111.autocode.dev/boa-how-to@dev//", {
     method: "POST",
     headers: {
       Accept: "application/json",
